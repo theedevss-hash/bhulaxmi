@@ -121,7 +121,7 @@ All colors MUST be HSL.
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif;
+    @apply font-oswald;
   }
 }
 
@@ -245,5 +245,13 @@ All colors MUST be HSL.
    a:hover {
   color: #ffd700; /* golden hover */
   transition: color 0.3s ease;
+}
+
+
+.oswald {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
 

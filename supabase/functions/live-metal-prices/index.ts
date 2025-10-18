@@ -8,14 +8,14 @@ const corsHeaders = {
 // Mock live price data - in production, this would fetch from a real API
 const getPriceData = (metal: string) => {
   const basePrices = {
-    'gold': 65.50,
-    'silver': 0.85,
-    'platinum': 32.40,
-    'palladium': 30.10
+    'gold': 0,
+    'silver': 0,
+    'platinum': 0,
+    'palladium': 0
   };
 
   const basePrice = basePrices[metal as keyof typeof basePrices] || basePrices.gold;
-  const randomChange = (Math.random() - 0.5) * 2; // -1% to +1%
+  const randomChange = 0; // -1% to +1%
 
   return {
     metal,
