@@ -1,24 +1,32 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App.tsx";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";
 import "./index.css";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import { trackVisitor } from "./utils/visitorTracker";
 
-// Register service worker for PWA
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js').catch(() => {
-      // Silent fail - PWA is optional
-    });
-  });
-}
+trackVisitor();
 
-createRoot(document.getElementById("root")!).render(
+
+// Register service worker
+
+// if ("serviceWorker" in navigator) {
+//   window.addEventListener("load", () => {
+//     navigator.serviceWorker.register("/sw.js").catch(() => {
+      
+//     });
+//   });
+// }
+
+createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <ErrorBoundary>
       <ThemeProvider>
-        <App />
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
       </ThemeProvider>
     </ErrorBoundary>
   </React.StrictMode>

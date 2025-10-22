@@ -238,7 +238,7 @@ All colors MUST be HSL.
 
 /* --- Luxury Brown Gradient for Navbar --- */
 .luxury-brown-gradient {
-  background: linear-gradient(90deg, #4b2e05 0%, #7a4b12 50%, #b8860b 100%);
+  background: linear-gradient(90deg, #b69974 0%, #744a18 50%, #966525 100%);
   color: #fff;
 }
 
