@@ -45,7 +45,7 @@ export const products: Product[] = [
     id: 'gold-4',
     name: 'Heritage Gold Ring',
     price: 2299,
-    image: 'https://ibb.co/rRjYbDh1',
+    image: "@/assets/product-images/goldring.jpg",
     description: '22K gold ring with antique finish',
     category: 'gold',
   },
